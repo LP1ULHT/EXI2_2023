@@ -12,17 +12,18 @@
 
 >Este exercício deverá ser submetido na plataforma Pandora até às 23h59 de dia 16 de Abril e será contabilizado para a nota final da unidade curricular de acordo com os critérios disponibilizados na página da disciplina, concretamente nos slides da primeira aula.
 
->Todos os trabalhos serão comparados utilizando um sistema de detecção de plágio.
+>Todos os trabalhos serão comparados utilizando um sistema de deteção de plágio.
 
 
 ## Contexto
- Suponha que uma equipa de pintores pretende pintar as paredes de um edifício. Estas paredes estão divididas em secções de iguais dimenções, identificadas através de números inteiros. Por exemplo, se uma paredes tivesse 10 secções, as secções 2, 3 e 4 poderiam ser atribuídas a um pintor, enquanto que outro poderia ficar com as secções 8 e 9. A forma de indicar estas esta atribuição no caderno de encargos seria a seguinte:
+Suponha que uma equipa de pintores pretende pintar as paredes de um edifício. Estas paredes estão divididas em secções de iguais dimensões, identificadas através de números inteiros. Por exemplo, se uma parede tivesse 10 secções, as secções 2, 3 e 4 poderiam ser atribuídas a um pintor, enquanto outro poderia ficar com as secções 8 e 9. A forma de indicar estas atribuições no caderno de encargos seria a seguinte:
 ```
 2-4,8-9
 ```
-Por outras palavras, a cada pintor é atribuído um conjunto de secções. Atenção: a um pintor pode ser atribuída apenas uma secção, através de uma atribuição desta forma: `9-9`.
+Por outras palavras, a cada pintor é atribuído um conjunto de secções. **Atenção:** a um pintor pode ser atribuída apenas uma secção, através de uma atribuição desta forma: `9-9`.
 
-Como forma de agilizar o trabalho a equipa de pintores decide-se dividir em pares, duas pessoas a pintar dois conjuntos de secções torna o serviço mais rápido ainda que o número de pessoas por secção seja o mesmo. Estas atribuições são geradas por um programa que gera um ficheiro com este formato:
+Como forma de agilizar o trabalho a equipa de pintores decidiu dividir-se em pares, duas pessoas a pintar dois conjuntos de secções modo a tornar o serviço mais rápido.
+Estas atribuições são geradas por um programa que gera um ficheiro com este formato:
 ```
 3-4,5-6
 2-3,1-5
@@ -30,18 +31,18 @@ Como forma de agilizar o trabalho a equipa de pintores decide-se dividir em pare
 5-9,1-4
 7-8,4-7
 ```
- Ao começarem a comparar as atribuíções com as do seu par, os pintores percebem que algumas das atribuições se sobrepõem, ou seja, existiria trabalho duplicado.
+Os pintores ao compararem as atribuições assignadas percebem que algumas das atribuições se sobrepõem, ou seja, existiria trabalho duplicado.
  
 ## Descrição
-
- Para tentar encontrar rapidamente quantos pares de atribuições têm trabalho duplicado os pintores precisam que os alunos escrevam um programa em C, que lê da consola estes pares. No exemplo cada par tem apenas um dígito para simplificar o exemplo, contudo, **há edifícios enormes, com IDs de paredes com valores muito, muito grandes, mas sempre positivos**.
-
- Para terminar o programa basta o pintor parar de inserir pares de números com o formato definido, não sendo necessário usar um comando de saída. Por outras palavras qualquer introdução de dados fora de formato faz parar o programa. Em seguida o programa deverá mostrar a contabilização de quantos pares:
- 1. Têm Sobreposição (overlaped), por exemplo, `2-3,3-5`
+Para tentar encontrar rapidamente quantos pares de atribuições têm trabalho duplicado os pintores precisam que os alunos escrevam um programa em C, que lê da consola estes pares. 
+No exemplo cada par tem apenas um dígito para simplificar o exemplo, contudo, **há edifícios enormes, com IDs de paredes com valores muito, muito grandes, mas sempre positivos**. Por exemplo `434-500`.
+Para terminar o programa basta o pintor parar de inserir pares de números com o formato definido, não sendo necessário usar um comando de saída. Por outras palavras qualquer introdução de dados fora de formato faz parar o programa. 
+Em seguida o programa deverá mostrar a contabilização de quantos pares:
+ 1. Têm sobreposição (overlaped), por exemplo, `2-3,3-5`
  2. Quantos estão totalmente contidos (included) no outro conjunto, por exemplo `4-9, 6-8` ou `2-3,1-6`
  3. Número total de trabalhos atribuídos
 
-Veja-se o formato esperado na consola:
+Exemplo do formato esperado na consola:
  ```
 intervals included 5
 intervals overlaped 12
